@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validations</title>
+    <script>
+        function validateform() {
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+
+            if (name == null || name == "") {
+                alert("Nmae can't be blank");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password must be at lest 6 characters aong.");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+        Nmae : <input type="text" name="name"><br>
+        password : <input type="password" name="password"><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+
+</html>

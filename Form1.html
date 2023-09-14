@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form1</title>
+</head>
+<body align="center">
+    <h1>CREAT YOUR ACCOUNT</h1>
+    <table cellspacing="2" align="center" cellpadding="8" border="0">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" placeholder="Enter your Name" id="n1"></td>
+        </tr>
+        <tr>
+            <td>Emain</td>
+            <td><input type="email" placeholder="Enter your Emain" id="e1"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" placeholder="Enter your password" id="p1"></td>
+        </tr>
+        <tr>
+            <td>Re-Password</td>
+            <td><input type="password" placeholder="Re-Enter password" id="p2"></td>
+        </tr>
+        <tr>
+            <td><button onclick="Creat_accout()">Creat</button></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+       function Creat_accout(){
+        var n=document.getElementById("n1").value;
+        var e=document.getElementById("e1").value;
+        var p=document.getElementById("p1").value;
+        var cp=document.getElementById("p2").value;
+
+        var letters = /^[A-Za-z]+$/;
+        var email_val = /^([a-zA-Z0-9_\.\-]+\@(([a-zA-Z0-9\-])+\.)+([a-zA-z0-9]{2,4})+$/;
+
+        if(n==''||e==''||p==''||cp==''){
+            alert("Enter each details correctluy");
+            return false;
+        }
+       }
+    </script>
+
+</body>
+</html>

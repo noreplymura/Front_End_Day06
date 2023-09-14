@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript addEventListener()</h2>
+    <p>This Example uses the addEventListener() method to attach a click event to a button.</p>
+    <button id="mybtn">Try it</button>
+    <p id="demo"></p>
+    <script>
+        let p1=5;
+        let p2=7;
+        document.getElementById("mybtn").addEventListener("click",display);
+        function display(){display1(p1,p2)}
+        function display1(a,b){
+            document.getElementById("demo").innerHTML=a*b;
+        }
+    </script>
+</body>
+</html>
